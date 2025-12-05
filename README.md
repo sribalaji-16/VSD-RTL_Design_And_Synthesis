@@ -36,4 +36,9 @@ The focus of this session was `Gate-Level Simulation`, where synthesized netlist
 
 ## Day 5: Verilog Synthesis - Avoiding Latches, Loops & Scalable Hardware
 
-The final session focused on behavioral constructs in Verilog such as `if-else,` `case statements`, and `loops`, and how they translate into hardware. Key learnings included avoiding unintended latches caused by incomplete `conditional assignments` and understanding the difference between `priority logic `and `parallel decision` structures. 
+The final session focused on the major part of the topics such as,
+- `If , Case constructs`
+- Labs on `"Incomplete If Case"`
+- Labs on `"Incomplete overlapping Case"`
+- `for loop` and `for generate`
+- Labs on `"for loop"` and `"for generate"`
