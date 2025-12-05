@@ -46,6 +46,12 @@ yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```sh
 yosys> show
 ```
+<img width="1920" height="1079" alt="screenshot-2025-12-05_13-43-36" src="https://github.com/user-attachments/assets/509491dd-8342-4aaf-8099-b91e5a127ee6" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/8d78a7c9-8f54-4db3-9caa-e2678fc7914e" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/24e41b08-a2eb-4d78-aff0-a7a6cb91572a" />
+
 
 `Opt_check2.v` is a 2x1 mux
 ```v
@@ -76,6 +82,12 @@ yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```sh
 yosys> show
 ```
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/6d3e6567-8382-4d36-b26c-4eecedb59b62" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/ba4172d3-10c1-413a-afe6-19589283026e" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/b83d1709-8824-45c1-8c5d-4bd3561a490b" />
+
 
 `Opt_check3.v` 
 ```v
@@ -105,6 +117,12 @@ yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```sh
 yosys> show
 ```
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/4aa8066d-c5d2-4ae5-9633-468b61aa2be2" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/6dc5a3d1-d931-4a51-9f68-f9e29434cc43" />
+
+
+
 
 `Opt_check4.v` 
 ```v
@@ -134,6 +152,11 @@ yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```sh
 yosys> show
 ```
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/29dbc0ce-75a9-4bbd-8fcb-ef04e65ff377" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/450abb19-29d1-4fff-9978-aa6bc5fbd0e4" />
+
+
 the similar steps follows for Multiple module opt also 
 `multiple_module_opt.v`
 ```v 
@@ -159,6 +182,13 @@ assign y = c | (b & n1);
 
 endmodule
 ```
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/01ea11c5-586a-4484-9d98-71b049b7e266" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/b7279be5-41e7-47b9-a256-e66ea6a9ea3f" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/622719a6-d015-412e-85f0-fa0d2354761b" />
+
+
 `multiple_module_opt2.v`
 ```v
 module sub_module1(input a , input b , output y);
@@ -196,6 +226,7 @@ sub_module U4 (.a(n3), .b(n1) , .y(y));
 
 endmodule
 ```
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/9ddd1045-79a2-4607-9ddb-50171c58cdef" />
 
 ## Sequential logic optimization
 Here We now going to see the `sequential constant propagation`
@@ -233,6 +264,12 @@ yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```sh
 yosys> show
 ```
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/4ac4d89e-bbdb-4a1e-bed7-dc800d294e02" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/f1a9f220-25e2-41d1-8374-8a4545687eee" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/db01ea83-d56e-45db-832c-6e2abc7ff0c5" />
+
 
 
 Similarly this implies for other dff_const verilog files as well  
@@ -270,6 +307,7 @@ end
 
 endmodule
 ```
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/1fd1ef76-62f8-41ea-aa93-75c6d3cb9c25" />
 
 `dff_count4.v`
 ```v
@@ -313,6 +351,7 @@ end
 
 endmodule
 ```
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/6b27256c-173d-4852-b50e-1b6b45093fd1" />
 
 ## Counter Optimization
 Similarly we have optimization for counter cell also, where it is nothing but an `state optimization`
@@ -335,6 +374,12 @@ endmodule
 ```
 Synthesis for this is also same like given before
 
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/c20c2d05-b4b7-442c-a16c-d1f228b8351b" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/5e90db85-e0b1-46fa-ac12-9b7277bd8149" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/dc8fc0ad-4195-4c0d-8175-3b618e87fe71" />
+
 `counter_opt2.v`
 ```v
 module counter_opt (input clk , input reset , output q);
@@ -353,3 +398,8 @@ endmodule
 ```
 Synthesis of this is also similar like before what we did
 
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/2482a625-c578-451e-9678-25f2a1afecee" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/780719db-0fcf-4c21-b08d-2ec9021e95eb" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_15-56-18" src="https://github.com/user-attachments/assets/d593fdee-435c-458a-8b8e-1292496f0be6" />
