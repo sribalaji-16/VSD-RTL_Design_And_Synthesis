@@ -63,6 +63,9 @@ gtkwave <filename>.vcd
 Note: The name of the .vcd file is determined by the `$dumpfile("filename.vcd");` system task located inside your Verilog testbench code.
 <img width="1920" height="1080" alt="screenshot-2025-12-03_17-02-10" src="https://github.com/user-attachments/assets/207186e1-c1c6-4cbd-aff4-3c71dd7356d7" />
 
+<img width="1920" height="1080" alt="screenshot-2025-12-03_17-02-50" src="https://github.com/user-attachments/assets/e2189477-665f-492d-9fee-b96507714486" />
+
+
 
 # Introduction to the yosys
 ## Yosys (Synthesizer)
@@ -93,6 +96,7 @@ First we need to invoke the yosys , to do this just tyoe the given below in kons
 ```sh
 yosys
 ```
+
 After invoking you could see the changes which we will be like `yosys>`
 ### Step 2
 Next we need to read the .lib file using the `read_liberty` and als specify the `location of the .lib file` location from the directory where you use the yosys
@@ -109,20 +113,42 @@ We need to specify `synth -top` to specify the module which we want to synthesis
 ```sh
 yosys> synth -top good_mux
 ```
+<img width="1920" height="1080" alt="screenshot-2025-12-05_00-27-47" src="https://github.com/user-attachments/assets/adc45204-50c0-4c7a-a196-db1406c2c1bd" />
+
 ### Step 5
 We need to generate the netlist we can do this by using the given below code,
 Where `abc -liberty` is given to convert the rtl file to gate file where we specify the library file which we want the those rtl design to be functioned using those specified cell based library.
 ```sh
 yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
+<img width="1920" height="1080" alt="screenshot-2025-12-05_00-27-47" src="https://github.com/user-attachments/assets/66f3d01d-991c-4bc5-9e00-2b729e3db10d" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_00-27-47" src="https://github.com/user-attachments/assets/e11b5eda-53e2-4a13-889d-39e9df479c30" />
+
 ### Step 6 
 We can visualize the realized logic using the `show` command 
 this gives the graphical version of that design file (where this will be in .dot file we need the xdot package to view this design in graphical window)
 ```sh
 yosys> show
 ```
+<img width="1920" height="1080" alt="screenshot-2025-12-05_00-27-47" src="https://github.com/user-attachments/assets/12173189-253a-4fca-89a1-99eba7c82a16" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_00-27-47" src="https://github.com/user-attachments/assets/52d0a88f-6d35-417b-a91f-43cba83a5c94" />
+
 ### Step 7
 In this step we can write the netlist file using the write_verilog function followed by the netlist name which we can define 
 ```sh
 yosys> write_verilog -noattr good_mux_netlist.v
 ```
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_00-27-47" src="https://github.com/user-attachments/assets/ad2ce0a2-eda8-45f4-9c79-900b29ba3fad" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_00-27-47" src="https://github.com/user-attachments/assets/2a0712e0-6ed1-4ecc-80fd-e256656e0ae0" />
+
+
+
+
+
+
+
+
