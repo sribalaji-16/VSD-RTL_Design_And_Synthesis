@@ -155,6 +155,10 @@ sky130RTLDesignAndSynthesisWorkshop/verilog_files main ❯ ./a.out
 ```sh
 sky130RTLDesignAndSynthesisWorkshop/verilog_files main ❯ gtkwave tb_dff_asyncres.vcd  
 ```
+<img width="1920" height="1080" alt="screenshot-2025-12-05_12-06-53" src="https://github.com/user-attachments/assets/bc4d9706-d6e1-4025-88ee-d8df522e0c2a" />
+
+<img width="1919" height="1080" alt="screenshot-2025-12-05_12-09-34" src="https://github.com/user-attachments/assets/9c11d962-ea3b-4918-b4e1-8b05a2fc2cd8" />
+
 
 Similarly here `dff_async_set.v`
 
@@ -167,6 +171,10 @@ sky130RTLDesignAndSynthesisWorkshop/verilog_files main ❯ ./a.out
 ```sh
 sky130RTLDesignAndSynthesisWorkshop/verilog_files main ❯ gtkwave tb_dff_async_set.vcd  
 ```
+<img width="1920" height="1080" alt="screenshot-2025-12-05_12-12-32" src="https://github.com/user-attachments/assets/110f3e91-4f95-496f-ba48-d97ae393674a" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_12-13-04" src="https://github.com/user-attachments/assets/d9af4088-a2ee-4a88-b044-16d993356611" />
+
 For `synchronous`
 
 ```sh
@@ -178,6 +186,10 @@ sky130RTLDesignAndSynthesisWorkshop/verilog_files main ❯ ./a.out
 ```sh
 sky130RTLDesignAndSynthesisWorkshop/verilog_files main ❯ gtkwave tb_dff_syncres.vcd  
 ```
+<img width="1920" height="1080" alt="screenshot-2025-12-05_12-16-05" src="https://github.com/user-attachments/assets/ee0695f2-f80c-48b3-9c97-f301ddcf70a3" />
+
+<img width="1920" height="1077" alt="screenshot-2025-12-05_12-16-48" src="https://github.com/user-attachments/assets/32eec617-2401-4740-80b0-9715a5ab394f" />
+
 ### Yosys synthesis for this flop based coding style
 
 here after synth -top we give `dfflibmap -liberty ..` so that it will select the `d flipflop afterwards` we give standard synthesis step  
@@ -202,6 +214,18 @@ yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```sh
 yosys> write_verilog -noattr dff_asyncres_net.v  
 ```
+<img width="1920" height="1079" alt="screenshot-2025-12-05_13-35-57" src="https://github.com/user-attachments/assets/d0d3e679-d516-4e75-a18e-623ac3defc18" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_13-36-34" src="https://github.com/user-attachments/assets/f32e0f02-9a01-4046-82d8-9ceb8d7d2f3c" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_13-39-07" src="https://github.com/user-attachments/assets/23dcd889-4abf-4c8c-9dce-6553613e7fac" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_13-39-07" src="https://github.com/user-attachments/assets/d38850b6-bbcf-4c3e-b40d-20e8fdfb977b" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_13-40-29" src="https://github.com/user-attachments/assets/ac8edcf3-c9d0-41ab-bb21-d7d4d72024d3" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_13-41-14" src="https://github.com/user-attachments/assets/5b7fc997-ff9c-451f-9835-74df0cbe0642" />
+
  `dff_syncres.v`
 
 ```sh
@@ -222,4 +246,10 @@ yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```sh
 yosys> write_verilog -noattr dff_syncres_net.v  
 ```
-  
+<img width="1920" height="1080" alt="screenshot-2025-12-05_13-42-52" src="https://github.com/user-attachments/assets/7a6ca3fd-8497-499f-9cc9-ef1863967447" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_13-42-52" src="https://github.com/user-attachments/assets/d3352ed8-c396-48a2-8854-6985b1d92926" />
+
+<img width="1920" height="1079" alt="screenshot-2025-12-05_13-43-36" src="https://github.com/user-attachments/assets/9f2e73ad-06ca-4535-9aca-92b65f754be9" />
+
+<img width="1920" height="1079" alt="screenshot-2025-12-05_13-43-36" src="https://github.com/user-attachments/assets/ecfc14cb-56e5-49e2-8e62-a65a044af4a1" />
