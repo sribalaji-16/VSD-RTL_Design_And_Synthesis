@@ -61,6 +61,8 @@ Launch `GTKWave` to open the generated VCD file and inspect the `waveforms`.
 gtkwave <filename>.vcd
 ```
 Note: The name of the .vcd file is determined by the `$dumpfile("filename.vcd");` system task located inside your Verilog testbench code.
+<img width="1920" height="1080" alt="screenshot-2025-12-03_17-02-10" src="https://github.com/user-attachments/assets/207186e1-c1c6-4cbd-aff4-3c71dd7356d7" />
+
 
 # Introduction to the yosys
 ## Yosys (Synthesizer)
