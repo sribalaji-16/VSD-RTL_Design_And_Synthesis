@@ -78,14 +78,29 @@ yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```sh
 yosys> write_verilog -noattr multiple_modules_net.v
 ```
+<img width="1913" height="1076" alt="screenshot-2025-12-05_11-34-02" src="https://github.com/user-attachments/assets/2c6811cc-194a-42fb-b3ba-c01dc157dc59" />
+
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_11-34-26" src="https://github.com/user-attachments/assets/c8130649-011c-4e3b-b76e-130d2c5eac9f" />
+
 
 for flatten we use the command `flatten` which are as follows
 ```sh
 yosys> flatten
 ```
+<img width="1920" height="1079" alt="screenshot-2025-12-05_11-54-56" src="https://github.com/user-attachments/assets/605e81c0-12a0-4fa4-9fe2-6c9de1f6760f" />
+
 ```sh
 yosys> write_verilog -noattr multiple_modules_flat_net.v
 ```
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_11-42-05" src="https://github.com/user-attachments/assets/5ca4bf61-935e-41ec-99b1-0aad972ba5f5" />
+
+<img width="1920" height="1070" alt="screenshot-2025-12-05_11-51-43" src="https://github.com/user-attachments/assets/e4b5d64b-7080-45fe-b108-0eb9d5ad41a6" />
+
+
+<img width="1920" height="1079" alt="screenshot-2025-12-05_11-52-04" src="https://github.com/user-attachments/assets/bff69494-b47f-4210-84b9-30242949fb07" />
+
 #### Sub_module1
 Similarly for `Sub_module1`
 ```sh
@@ -110,6 +125,15 @@ yosys> flatten
 ```sh
 yosys> write_verilog -noattr sub_module1_flat_net.v
 ```
+<img width="1910" height="1065" alt="screenshot-2025-12-05_11-43-26" src="https://github.com/user-attachments/assets/81edab71-c2c8-4868-b137-c00f4a9785b3" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_11-44-31" src="https://github.com/user-attachments/assets/a1d61943-26bd-416e-a807-f8c36bec96b8" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_11-45-43" src="https://github.com/user-attachments/assets/9621bfd5-e994-4965-bed1-8cedec0cc942" />
+
+<img width="1920" height="1080" alt="screenshot-2025-12-05_11-46-10" src="https://github.com/user-attachments/assets/79ba33d8-2d08-49c9-8899-6bc87b085814" />
+
+<img width="1920" height="1074" alt="screenshot-2025-12-05_11-50-35" src="https://github.com/user-attachments/assets/9c824d4b-5304-47c8-a5eb-997e1d0f2350" />
 
 # Flop coding styles
 
