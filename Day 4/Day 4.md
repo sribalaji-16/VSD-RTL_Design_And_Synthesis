@@ -1,14 +1,30 @@
 # Gate-Level Simulation (GLS)
 
-Gate-Level Simulation is performed on the synthesized netlist, meaning the RTL design has already been converted into actual gate structures. The goal is to ensure that what the synthesis tool produced still behaves exactly like the original RTL, now including real hardware timing.
+Gate-Level Simulation is performed on running the test bench with Netlist as Design Under Test,Here the netlist is logically same as RTL code (which same test bench will align with the design) 
 
-### Why We Perform GLS
+The goal is to ensure that what the synthesis tool produced still behaves exactly like the original RTL, now including real hardware timing.
 
-- To ensure synthesis has not altered the logical behavior of the design.
+### Why we use GLS
 
-- To confirm that timing constraints are satisfied by applying real gate propagation delays through Standard Delay Format (SDF).
+- To verify the `Logical correctness` of design after synthesis.
 
-- To verify that additional test hardware inserted during synthesis, such as scan logic or BIST circuitry, functions correctly.
+- Ensuring the `timing` of the design is met.
+   - So for this GLS needs to be run with `delay annotation`.
+   - This depends upon the setup and hold time of the cell we used in the ckt design.
+
+### GLS using iverilog
+
+<img width="1841" height="981" alt="screenshot-2025-12-06_05-07-02" src="https://github.com/user-attachments/assets/c0239621-47e7-4d49-a11f-daa1f2611bc7" />
+
+### Synthesis and Simulation mismatches
+
+- `Missing Sensitivity List`
+   - Simulation may not update signals when an input changes, but synthesized hardware always reacts.
+- `Blocking vs Non-Blocking Assignments`
+   - Using the wrong assignment type changes execution order in simulation, but hardware works on parallel logic.
+- `Non Standard Verilog Coding`
+   - Some coding styles simulate fine but cannot be properly mapped into hardware.
+
 
 ### Stages When GLS Is Commonly Used
 
@@ -16,23 +32,7 @@ Gate-Level Simulation is performed on the synthesized netlist, meaning the RTL d
 
 - At the final sign-off stage, after static timing closure, to validate the design with accurate timing information.
 
-### Synthesis vs. Simulation Mismatch
-
-Occasionally, the behavior observed in gate-level simulation or real hardware does not match RTL simulation. These mismatches arise because some RTL constructs do not translate cleanly into hardware.
-
-#### Typical Sources of Mismatch
-
--Using simulation-only constructs such as delays or initial blocks in the synthesizable code.
-
-- Incomplete sensitivity lists in combinational processes, which may hide dependencies during simulation.
-
-- Poorly defined logic (like missing else clauses or asynchronous races) that leads to unpredictable synthesis outcomes.
-
-- Different handling of logic by simulators and synthesis engines, causing subtle interpretation differences.
-
-### Preventive Measure:
-Follow synthesizable coding guidelines and make sure all behavior is explicitly defined in the RTL.
-
+## Lab 
 `ternary_operator_mux.v`
 ```v
 module ternary_operator_mux (input i0 , input i1 , input sel , output y);
